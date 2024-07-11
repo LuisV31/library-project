@@ -32,7 +32,7 @@ const addBookToLibrary = (title, author, pages, read) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const newBookBtn = document.getElementById("new-book-btn");
-  const newBookForm = document.getElementById("new-booko-form");
+  const newBookForm = document.getElementById("new-book-form");
   const titleInput = document.getElementById("title");
   const authorInput = document.getElementById("author");
   const pagesInput = document.getElementById("pages");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const title = titleInput.value;
       const author = authorInput.value;
       const pages = pagesInput.value;
-      const read = document.getElementById("read").ariaChecked;
+      const read = document.getElementById("read").checked;
       addBookToLibrary(title, author, pages, read);
       newBookForm.style.display = "none";
       newBookForm.reset();
